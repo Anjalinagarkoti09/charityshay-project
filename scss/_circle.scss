@@ -1,0 +1,15 @@
+.top-left-outline-circle {
+  position: absolute;
+  top: -300px;
+  left: -140px;
+  width: 460px;
+  height: 460px;
+  border: 2px solid #3A40D8;
+  border-radius: 50%;
+  z-index: 0;
+  opacity: 0.4;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}

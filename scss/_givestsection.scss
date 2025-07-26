@@ -1,0 +1,96 @@
+.givest-section {
+  background-color: #EEEAFC;
+  font-family: 'Montserrat', sans-serif;
+
+  background-image: url('../images/Ellipse1.svg');
+  background-repeat: no-repeat;
+  background-size: 200px;
+  background-position: top left;
+  padding: 50px 0;
+}
+
+
+
+.main-heading {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 40px;
+  margin-bottom: 1rem;
+  color: #1e1e1e;
+}
+
+.desc {
+  color: #5A5A5A;
+  line-height: 1.6;
+  font-size: 18px;
+}
+
+.highlight {
+  font-weight: 600;
+  color: #1a1a1a;
+  font-size: 20px;
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+.custom-btn {
+  background: #3A40D8;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-weight: 500;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  &:hover {
+    background: #3A40D8;
+      color: white;   
+  }
+}
+
+.image-grid {
+  .main-img {
+    width: 100%;
+    height: auto;
+  }
+
+  .thumbs {
+    gap: 1rem;
+
+    img {
+      width: calc(50% - 0.5rem);
+    }
+  }
+}
+
+.vertical-line {
+  width: 2px;
+  height: 50px;
+  background-color: #3A40D8;
+}
+
+@media (max-width: 767px) {
+  .main-heading {
+    font-size: 28px;
+  }
+
+  .desc {
+    font-size: 16px;
+  }
+
+  .highlight {
+    font-size: 18px;
+  }
+
+  .thumbs img {
+    width: 100%;
+  }
+
+  .vertical-line {
+    display: none;
+  }
+}

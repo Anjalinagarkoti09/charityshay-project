@@ -1,0 +1,118 @@
+.blog-card {
+  border: 1px solid #eee;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+  transition: all 0.3s ease;
+  font-family: 'Montserrat', sans-serif;
+
+  .blog-img {
+    position: relative;
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    .date-box {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: #3A40D8;
+      color: #fff;
+      padding: 6px 10px;
+      border-radius: 4px;
+      text-align: center;
+      font-size: 12px;
+
+      span {
+        display: block;
+        font-weight: bold;
+        font-size: 18px;
+      }
+
+      small {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .blog-content {
+    padding: 20px;
+
+    .badge {
+      font-size: 17px;
+      padding: 10px 20px;
+      border-radius: 4px;
+      background-color: #D3CAF8;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .card-title {
+      min-height: 60px;
+      overflow: hidden;
+      font-family: 'Montserrat';
+    }
+
+    .card-text {
+      min-height: 60px;
+      font-size: 18px;
+      color: #666;
+    }
+
+    .author {
+      font-size: 14px;
+      color: #333;
+    }
+
+    .btn {
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border-radius: 12px;
+      padding: 10px 16px;
+      font-family: 'Montserrat', sans-serif;
+      border: 2px solid #3A40D8;
+      color: #3A40D8;
+      background-color: transparent;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: #3A40D8;
+        color: #fff;
+        border-color: #3A40D8;
+      }
+
+      &:focus,
+      &:active {
+        background-color: #3A40D8;
+        color: #fff;
+        border-color: #3A40D8;
+        outline: none;
+        box-shadow: none;
+      }
+    }
+  }
+
+  &:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.custom-indicators {
+  .dot {
+    width: 8px;
+    height: 8px;
+    background-color: #9483F1;
+    border-radius: 32px;
+    transition: all 0.3s ease;
+  }
+
+  .dot.active {
+    width: 32px;
+    height: 8px;
+    background-color: #3A40D8;
+  }
+}

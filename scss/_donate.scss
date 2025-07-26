@@ -1,0 +1,102 @@
+.donate {
+  background-color: #fff;
+  font-family: 'Montserrat', sans-serif;
+
+  .main-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #1e1e1e;
+    margin-bottom: 0.5rem;
+    text-transform: capitalize;
+  }
+
+  .help-card {
+    border: 1px solid #eee;
+    border-radius: 12px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    }
+
+    img {
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      width: 100%;
+    }
+
+    .stat-row {
+      font-size: 14px;
+
+      .stat-label {
+        color: #555;
+        font-weight: 600;
+        line-height: 28px;
+        font-size: 18px;
+      }
+
+      .stat-value {
+        font-weight: 600;
+        font-size: 22px;
+        color: #3A40D8;
+      }
+    }
+
+    .help-title {
+      font-weight: 600;
+      font-size: 24px;
+      color: #1a1a1a;
+    }
+
+    .help-text {
+      color: #4d4d4d;
+      font-size: 14px;
+      margin: 0.5rem 0;
+    }
+
+    .author-name {
+      font-size: 14px;
+      color: #333;
+
+      i {
+        font-size: 16px;
+        color: #3A40D8;
+      }
+    }
+
+    .btn-outline-primary {
+      font-size: 18px;
+      padding: 6px 14px;
+      border-radius: 8px;
+      color: #3A40D8;
+
+      &:hover {
+        background: #3A40D8;
+        color: white;
+      }
+    }
+  }
+
+  .custom-indicators {
+    .dot {
+      width: 8px;
+      height: 8px;
+      background-color: #9483F1;
+      border-radius: 32px;
+      transition: all 0.3s ease;
+    }
+
+    .dot.active {
+      width: 32px;
+      height: 8px;
+      background-color: #3A40D8;
+    }
+  }
+}

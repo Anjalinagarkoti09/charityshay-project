@@ -1,0 +1,46 @@
+.navbar-wrapper {
+  z-index: 1;
+}
+
+.custom-navbar {
+  background-color: #ffffff;
+  padding: 20px 0;
+  font-family: 'Montserrat';
+
+
+
+  .logo-img {
+    height: 69px;
+    width: 128px;
+    object-fit: contain;
+    display: block;
+  }
+
+
+  .navbar-nav .nav-link {
+    font-size: 18px;
+    font-weight: 500;
+    color: #000;
+    transition: color 0.3s;
+
+    &.active,
+    &:hover {
+      color: #3A40D8;
+    }
+  }
+
+  .support-btn {
+    background-color: #3A40D8;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 16px 24px;
+    border-radius: 12px;
+    gap: 8px;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: #3A40D8;
+    }
+  }
+}

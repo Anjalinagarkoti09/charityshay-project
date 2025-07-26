@@ -1,0 +1,53 @@
+.footer {
+  background-color: #1c1c1c;
+  color: #ffffff;
+  font-family: 'Montserrat';
+
+  a {
+    color: #ffffff;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+      color: #cccccc;
+    }
+  }
+
+  .social-icons i {
+    font-size: 24px;
+    color: #ffffff;
+
+    &:hover {
+      color: #cccccc;
+    }
+  }
+
+  p, li {
+    font-size: 18px;
+    line-height: 28px;
+        text-align: start;
+    
+  }
+
+}
+
+  .logo-img {
+    height:69px;
+    width:128px;
+    object-fit: none;
+   
+    
+  }
+
+.logo-description {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  color: white;
+  text-align: justify;
+}
+
+  
+
+
+
+

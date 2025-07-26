@@ -1,0 +1,67 @@
+
+h1 {
+  font-family: 'Playfair Display', serif;
+}
+
+.help-section {
+  background-color: #fff;
+   font-family: 'Montserrat', sans-serif;
+
+  .section-title {
+    font-size: 28px;
+    font-weight: 600;
+    color: #222;
+  font-family: 'Playfair Display', serif;
+  }
+
+  .help-card {
+   
+  width: 363px;
+  height: 381px;
+  background-color: #fff; 
+  border-radius: 10px;     
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  transition: 0.3s;
+
+
+
+
+    &:hover {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+  }
+
+  .help-icon {
+    height: 60px;
+    object-fit: contain;
+  }
+
+  .help-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 10px;
+  }
+
+  .help-text {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    margin: 0 auto;
+  }
+
+  .help-btn {
+    font-size: 14px;
+    font-weight: 500;
+    color: #3A40D8;
+    border: 1px solid #3A40D8;
+    border-radius: 6px;
+    padding: 8px 16px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: #3A40D8;
+      color: white;
+    }
+  }
+}
