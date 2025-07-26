@@ -1,14 +1,20 @@
 .donate {
   background-color: #fff;
   font-family: 'Montserrat', sans-serif;
+  padding: 80px 0;
 
   .main-heading {
     font-family: 'Playfair Display', serif;
     font-size: 32px;
     font-weight: 700;
     color: #1e1e1e;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
     text-transform: capitalize;
+    text-align: center;
+
+    @media (max-width: 768px) {
+      font-size: 24px;
+    }
   }
 
   .help-card {
@@ -19,6 +25,7 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
     display: flex;
     flex-direction: column;
+    height: 100%;
 
     &:hover {
       transform: translateY(-5px);
@@ -30,16 +37,19 @@
       object-fit: cover;
       border-radius: 8px;
       width: 100%;
+      margin-bottom: 1rem;
     }
 
     .stat-row {
       font-size: 14px;
+      color: #555;
+      margin-bottom: 1rem;
 
       .stat-label {
-        color: #555;
+        display: block;
         font-weight: 600;
-        line-height: 28px;
-        font-size: 18px;
+        font-size: 16px;
+        line-height: 1.2;
       }
 
       .stat-value {
@@ -51,19 +61,29 @@
 
     .help-title {
       font-weight: 600;
-      font-size: 24px;
+      font-size: 20px;
       color: #1a1a1a;
+      margin-bottom: 0.5rem;
+
+      @media (max-width: 768px) {
+        font-size: 18px;
+      }
     }
 
     .help-text {
       color: #4d4d4d;
       font-size: 14px;
-      margin: 0.5rem 0;
+      margin-bottom: 1rem;
+      line-height: 1.6;
     }
 
     .author-name {
       font-size: 14px;
       color: #333;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 1rem;
 
       i {
         font-size: 16px;
@@ -72,31 +92,52 @@
     }
 
     .btn-outline-primary {
-      font-size: 18px;
-      padding: 6px 14px;
+      font-size: 16px;
+      padding: 6px 16px;
       border-radius: 8px;
       color: #3A40D8;
+      border: 1px solid #3A40D8;
+      font-weight: 500;
+      text-decoration: none;
+      align-self: flex-start;
 
       &:hover {
         background: #3A40D8;
         color: white;
       }
     }
+
+    .mt-auto {
+      margin-top: auto;
+    }
   }
 
-  .custom-indicators {
-    .dot {
-      width: 8px;
-      height: 8px;
-      background-color: #9483F1;
-      border-radius: 32px;
-      transition: all 0.3s ease;
-    }
+  .swiper-pagination-bullet {
+    background-color: #9483F1;
+    opacity: 1;
+    transition: width 0.3s ease;
+    border-radius: 8px;
+  }
 
-    .dot.active {
-      width: 32px;
-      height: 8px;
-      background-color: #3A40D8;
+  .swiper-pagination-bullet-active {
+    background-color: #3A40D8;
+    width: 32px;
+  }
+
+  @media (max-width: 768px) {
+    .row.g-4 {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+
+      > .col-md-4 {
+        flex: 0 0 85%;
+        max-width: 85%;
+        scroll-snap-align: start;
+        margin-right: 1rem;
+      }
     }
   }
 }

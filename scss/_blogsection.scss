@@ -79,12 +79,7 @@
       background-color: transparent;
       transition: all 0.3s ease;
 
-      &:hover {
-        background-color: #3A40D8;
-        color: #fff;
-        border-color: #3A40D8;
-      }
-
+      &:hover,
       &:focus,
       &:active {
         background-color: #3A40D8;
@@ -115,4 +110,35 @@
     height: 8px;
     background-color: #3A40D8;
   }
+}
+
+@media (max-width: 768px) {
+  .blog-slider {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    margin-left: 0;
+    padding-left: 16px;
+
+    > .col-md-4 {
+      flex: 0 0 95%;  
+      max-width: 95%;
+      scroll-snap-align: start;
+      margin-right: 1rem;
+    }
+
+    > .col-md-4:first-child {
+      margin-left: 0;
+    }
+  }
+
+  .blog-slider::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.blog-card {
+  min-height: 540px;
 }

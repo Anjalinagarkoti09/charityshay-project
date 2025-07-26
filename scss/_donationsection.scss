@@ -16,68 +16,85 @@ body {
     font-family: 'Montserrat';
 
     &:hover {
-      background-color: #3A40D8;
+      background-color: #2f35c5;
+      border-color: #2f35c5;
     }
   }
 
   .btn-outline-primary {
     font-family: 'Montserrat';
     border-color: #3A40D8;
-    color:  #3A40D8;
+    color: #3A40D8;
 
     &:hover {
       background-color: #3A40D8;
-      color: #ffff;
+      color: #fff;
     }
   }
 
   .btn-outline-secondary {
-    border-color: #ccc;
-    color: #333;
+    font-family: 'Montserrat';
+    border-color: #3A40D8;
+    color: #2A2A2A;
 
     &:hover {
-      background-color: #f1f1f1;
+      background-color: #f2f2f2;
+      color: #2A2A2A;
     }
   }
 
   .text-muted {
     color: #666 !important;
   }
-}
 
-.heading {
-  font-family: 'Playfair Display', serif;
-  font-weight: 700;
-  font-size: 2rem;
-  color: #111;
-}
-
-.sub-heading {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-  font-size: 1.1rem;
-}
-
-.main-img-wrapper {
-  width: 90%;
-  max-width: 420px;
-  position: relative;
-
-  @media (max-width: 576px) {
-    width: 100%;
+  .heading {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 2rem;
+    color: #111;
   }
-}
 
-.overlap-img {
-  width: 40%;
-  bottom: 0;
-  right: 0;
-  transform: translate(30%, 30%);
-  z-index: 2;
+  .sub-heading {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+  }
 
+  .main-img-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    border-radius: 12px;
+    overflow: hidden;
+    z-index: 1;
 
-  @media (max-width: 576px) {
-    width: 50%;
-    transform: translate(20%, 20%);
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 12px;
+    }
+
+    .overlap-img {
+      position: absolute;
+      width: 160px;
+      border-radius: 12px;
+      bottom: -20px;
+      right: -20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      z-index: 2;
+
+      @media (max-width: 768px) {
+        width: 120px;
+        bottom: -15px;
+        right: -15px;
+      }
+
+      @media (max-width: 576px) {
+        width: 100px;
+        bottom: -10px;
+        right: -10px;
+      }
+    }
   }
 }

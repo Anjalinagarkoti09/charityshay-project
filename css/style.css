@@ -12111,35 +12111,36 @@ textarea.form-control-lg {
   z-index: 3;
 }
 
-h1, .h1 {
-  font-family: "Playfair Display", serif;
-}
-
 .help-section {
   background-color: #fff;
   font-family: "Montserrat", sans-serif;
+  padding: 60px 0;
 }
 .help-section .section-title {
   font-size: 28px;
   font-weight: 600;
   color: #222;
   font-family: "Playfair Display", serif;
+  margin-bottom: 40px;
+  text-align: center;
 }
 .help-section .help-card {
-  width: 363px;
-  height: 381px;
   background-color: #fff;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: 0.3s;
-}
-.help-section .help-card:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s ease;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24px;
+  border: 1px solid #eee;
 }
 .help-section .help-icon {
   height: 60px;
   -o-object-fit: contain;
      object-fit: contain;
+  margin: 0 auto 20px;
 }
 .help-section .help-title {
   font-size: 18px;
@@ -12151,7 +12152,7 @@ h1, .h1 {
   font-size: 16px;
   color: #555;
   line-height: 1.6;
-  margin: 0 auto;
+  margin-bottom: 20px;
 }
 .help-section .help-btn {
   font-size: 14px;
@@ -12159,47 +12160,50 @@ h1, .h1 {
   color: #3A40D8;
   border: 1px solid #3A40D8;
   border-radius: 6px;
-  padding: 8px 16px;
+  padding: 12px 16px;
   transition: all 0.3s ease;
+  width: 120px;
+  height: 48px;
+  margin: 0 auto;
+  background: transparent;
+  cursor: pointer;
 }
 .help-section .help-btn:hover {
   background-color: #3A40D8;
-  color: white;
+  color: #fff;
 }
 
 .givest-section {
   background-color: #EEEAFC;
   font-family: "Montserrat", sans-serif;
+  padding: 60px 0;
+  position: relative;
   background-image: url("../images/Ellipse1.svg");
   background-repeat: no-repeat;
   background-size: 200px;
   background-position: top left;
-  padding: 50px 0;
 }
-
-.main-heading {
+.givest-section .main-heading {
   font-family: "Playfair Display", serif;
   font-weight: 700;
   font-size: 40px;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   color: #1e1e1e;
 }
-
-.desc {
+.givest-section .desc {
   color: #5A5A5A;
-  line-height: 1.6;
-  font-size: 18px;
+  line-height: 1.8;
+  font-size: 16px;
+  margin-bottom: 1.5rem;
 }
-
-.highlight {
+.givest-section .highlight {
   font-weight: 600;
   color: #1a1a1a;
   font-size: 20px;
-  margin-bottom: 0;
+  margin: 0;
   line-height: 1.5;
 }
-
-.custom-btn {
+.givest-section .custom-btn {
   background: #3A40D8;
   color: #fff;
   padding: 12px 24px;
@@ -12211,57 +12215,90 @@ h1, .h1 {
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  text-decoration: none;
 }
-.custom-btn:hover {
-  background: #3A40D8;
+.givest-section .custom-btn:hover {
+  background: #2f36b5;
   color: white;
 }
-
-.image-grid .main-img {
-  width: 100%;
-  height: auto;
-}
-.image-grid .thumbs {
+.givest-section .image-grid {
+  display: flex;
+  flex-direction: column;
   gap: 1rem;
 }
-.image-grid .thumbs img {
-  width: calc(50% - 0.5rem);
+.givest-section .image-grid .main-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
-
-.vertical-line {
+.givest-section .image-grid .thumbs {
+  display: flex;
+  gap: 1rem;
+}
+.givest-section .image-grid .thumbs img {
+  width: 50%;
+  height: 180px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px;
+}
+.givest-section .vertical-line {
   width: 2px;
   height: 50px;
   background-color: #3A40D8;
 }
-
+.givest-section .sub-texts {
+  align-items: center;
+}
 @media (max-width: 767px) {
-  .main-heading {
+  .givest-section .main-heading {
     font-size: 28px;
   }
-  .desc {
+  .givest-section .desc {
     font-size: 16px;
   }
-  .highlight {
+  .givest-section .highlight {
     font-size: 18px;
   }
-  .thumbs img {
-    width: 100%;
+  .givest-section .image-grid .thumbs {
+    flex-direction: column;
   }
-  .vertical-line {
+  .givest-section .image-grid .thumbs img {
+    width: 100%;
+    height: 180px;
+  }
+  .givest-section .vertical-line {
     display: none;
   }
+  .givest-section .sub-texts {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+  .givest-section .custom-btn {
+    justify-content: center;
+    width: 100%;
+  }
 }
+
 .donate {
   background-color: #fff;
   font-family: "Montserrat", sans-serif;
+  padding: 80px 0;
 }
 .donate .main-heading {
   font-family: "Playfair Display", serif;
   font-size: 32px;
   font-weight: 700;
   color: #1e1e1e;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
   text-transform: capitalize;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .donate .main-heading {
+    font-size: 24px;
+  }
 }
 .donate .help-card {
   border: 1px solid #eee;
@@ -12271,6 +12308,7 @@ h1, .h1 {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 .donate .help-card:hover {
   transform: translateY(-5px);
@@ -12282,15 +12320,18 @@ h1, .h1 {
      object-fit: cover;
   border-radius: 8px;
   width: 100%;
+  margin-bottom: 1rem;
 }
 .donate .help-card .stat-row {
   font-size: 14px;
+  color: #555;
+  margin-bottom: 1rem;
 }
 .donate .help-card .stat-row .stat-label {
-  color: #555;
+  display: block;
   font-weight: 600;
-  line-height: 28px;
-  font-size: 18px;
+  font-size: 16px;
+  line-height: 1.2;
 }
 .donate .help-card .stat-row .stat-value {
   font-weight: 600;
@@ -12299,43 +12340,74 @@ h1, .h1 {
 }
 .donate .help-card .help-title {
   font-weight: 600;
-  font-size: 24px;
+  font-size: 20px;
   color: #1a1a1a;
+  margin-bottom: 0.5rem;
+}
+@media (max-width: 768px) {
+  .donate .help-card .help-title {
+    font-size: 18px;
+  }
 }
 .donate .help-card .help-text {
   color: #4d4d4d;
   font-size: 14px;
-  margin: 0.5rem 0;
+  margin-bottom: 1rem;
+  line-height: 1.6;
 }
 .donate .help-card .author-name {
   font-size: 14px;
   color: #333;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 1rem;
 }
 .donate .help-card .author-name i {
   font-size: 16px;
   color: #3A40D8;
 }
 .donate .help-card .btn-outline-primary {
-  font-size: 18px;
-  padding: 6px 14px;
+  font-size: 16px;
+  padding: 6px 16px;
   border-radius: 8px;
   color: #3A40D8;
+  border: 1px solid #3A40D8;
+  font-weight: 500;
+  text-decoration: none;
+  align-self: flex-start;
 }
 .donate .help-card .btn-outline-primary:hover {
   background: #3A40D8;
   color: white;
 }
-.donate .custom-indicators .dot {
-  width: 8px;
-  height: 8px;
-  background-color: #9483F1;
-  border-radius: 32px;
-  transition: all 0.3s ease;
+.donate .help-card .mt-auto {
+  margin-top: auto;
 }
-.donate .custom-indicators .dot.active {
-  width: 32px;
-  height: 8px;
+.donate .swiper-pagination-bullet {
+  background-color: #9483F1;
+  opacity: 1;
+  transition: width 0.3s ease;
+  border-radius: 8px;
+}
+.donate .swiper-pagination-bullet-active {
   background-color: #3A40D8;
+  width: 32px;
+}
+@media (max-width: 768px) {
+  .donate .row.g-4 {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+  .donate .row.g-4 > .col-md-4 {
+    flex: 0 0 85%;
+    max-width: 85%;
+    scroll-snap-align: start;
+    margin-right: 1rem;
+  }
 }
 
 body {
@@ -12357,7 +12429,8 @@ body {
   font-family: "Montserrat";
 }
 .donation-section .btn-primary:hover {
-  background-color: #3A40D8;
+  background-color: #2f35c5;
+  border-color: #2f35c5;
 }
 .donation-section .btn-outline-primary {
   font-family: "Montserrat";
@@ -12366,54 +12439,66 @@ body {
 }
 .donation-section .btn-outline-primary:hover {
   background-color: #3A40D8;
-  color: white;
+  color: #fff;
 }
 .donation-section .btn-outline-secondary {
-  border-color: #ccc;
-  color: #333;
+  font-family: "Montserrat";
+  border-color: #3A40D8;
+  color: #2A2A2A;
 }
 .donation-section .btn-outline-secondary:hover {
-  background-color: #f1f1f1;
+  background-color: #f2f2f2;
+  color: #2A2A2A;
 }
 .donation-section .text-muted {
   color: #666 !important;
 }
-
-.heading {
+.donation-section .heading {
   font-family: "Playfair Display", serif;
   font-weight: 700;
   font-size: 2rem;
   color: #111;
 }
-
-.sub-heading {
+.donation-section .sub-heading {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-size: 1.1rem;
 }
-
-.main-img-wrapper {
-  width: 90%;
-  max-width: 420px;
+.donation-section .main-img-wrapper {
   position: relative;
+  width: 100%;
+  max-width: 420px;
+  border-radius: 12px;
+  overflow: hidden;
+  z-index: 1;
 }
-@media (max-width: 576px) {
-  .main-img-wrapper {
-    width: 100%;
-  }
+.donation-section .main-img-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
 }
-
-.overlap-img {
-  width: 40%;
-  bottom: 0;
-  right: 0;
-  transform: translate(30%, 30%);
+.donation-section .main-img-wrapper .overlap-img {
+  position: absolute;
+  width: 160px;
+  border-radius: 12px;
+  bottom: -20px;
+  right: -20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   z-index: 2;
 }
+@media (max-width: 768px) {
+  .donation-section .main-img-wrapper .overlap-img {
+    width: 120px;
+    bottom: -15px;
+    right: -15px;
+  }
+}
 @media (max-width: 576px) {
-  .overlap-img {
-    width: 50%;
-    transform: translate(20%, 20%);
+  .donation-section .main-img-wrapper .overlap-img {
+    width: 100px;
+    bottom: -10px;
+    right: -10px;
   }
 }
 
@@ -12490,12 +12575,7 @@ body {
   background-color: transparent;
   transition: all 0.3s ease;
 }
-.blog-card .blog-content .btn:hover {
-  background-color: #3A40D8;
-  color: #fff;
-  border-color: #3A40D8;
-}
-.blog-card .blog-content .btn:focus, .blog-card .blog-content .btn:active {
+.blog-card .blog-content .btn:hover, .blog-card .blog-content .btn:focus, .blog-card .blog-content .btn:active {
   background-color: #3A40D8;
   color: #fff;
   border-color: #3A40D8;
@@ -12517,6 +12597,33 @@ body {
   width: 32px;
   height: 8px;
   background-color: #3A40D8;
+}
+
+@media (max-width: 768px) {
+  .blog-slider {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    margin-left: 0;
+    padding-left: 16px;
+  }
+  .blog-slider > .col-md-4 {
+    flex: 0 0 95%;
+    max-width: 95%;
+    scroll-snap-align: start;
+    margin-right: 1rem;
+  }
+  .blog-slider > .col-md-4:first-child {
+    margin-left: 0;
+  }
+  .blog-slider::-webkit-scrollbar {
+    display: none;
+  }
+}
+.blog-card {
+  min-height: 540px;
 }
 
 .testimonial-section {
@@ -12574,98 +12681,170 @@ body {
   }
 }
 
-.montserrat-text {
-  font-family: "Montserrat", sans-serif;
-  font-size: 18px;
-}
-
 .event-stats-section {
   background-color: #fff;
+  padding: 60px 0;
 }
 .event-stats-section .section-title {
   font-size: 40px;
   font-weight: 700;
   font-family: "Playfair Display", serif;
+  margin-bottom: 2rem;
 }
 .event-stats-section .btn-primary {
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
   background-color: #4e57ef;
   border: none;
-  padding: 20px 32px;
+  padding: 18px 20px;
   height: 64px;
-  width: 212px;
+  width: 190px;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 16px;
 }
 .event-stats-section .event-card {
-  font-family: "Montserrat";
-  background: #f8f9fa;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  font-family: "Montserrat", sans-serif;
+  background: #fff;
+  padding: 1rem 1.25rem;
+  border-radius: 0.75rem;
+  border: 1px solid #eaeaea;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 1rem;
+  transition: transform 0.3s ease;
+}
+.event-stats-section .event-card:hover {
+  transform: translateY(-3px);
 }
 .event-stats-section .event-card img {
-  width: 118px;
-  height: 121px;
+  width: 100px;
+  height: 100px;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 0.5rem;
+  flex-shrink: 0;
+  align-self: center;
 }
-.event-stats-section .event-card h6, .event-stats-section .event-card .h6 {
-  font-size: 1.5rem;
+.event-stats-section .event-card .middle-content {
+  flex-grow: 1;
+  padding: 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-.event-stats-section .event-card p {
-  font-size: 1rem;
+.event-stats-section .event-card .middle-content h6, .event-stats-section .event-card .middle-content .h6 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
 }
-.event-stats-section .stat-box {
-  padding-top: 1rem;
+.event-stats-section .event-card .middle-content p {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 4px;
 }
-.event-stats-section .stat-box .stat-number {
-  font-size: 2.5rem;
-  font-weight: bold;
-  text-align: start;
+.event-stats-section .event-card .middle-content p strong {
+  font-weight: 600;
 }
-.event-stats-section .stat-box .stat-label {
-  font-size: 1rem;
-  color: #666;
-  text-align: start;
+.event-stats-section .event-card .vertical-divider {
+  width: 1px;
+  background-color: #999;
+  opacity: 0.3;
+  align-self: stretch;
+}
+.event-stats-section .event-card .text-end {
+  font-size: 13px;
+  color: #333;
+  text-align: end;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
 }
 
+@media (max-width: 991.98px) {
+  .event-stats-section .section-title {
+    font-size: 32px;
+  }
+  .event-stats-section .btn-primary {
+    width: 100%;
+    height: auto;
+    padding: 14px 16px;
+  }
+  .event-stats-section .event-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .event-stats-section .event-card .vertical-divider {
+    display: none;
+  }
+  .event-stats-section .event-card .text-end {
+    text-align: left;
+    align-items: flex-start;
+    margin-top: 0.75rem;
+  }
+  .event-stats-section .event-card img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 0.5rem;
+  }
+}
+@media (max-width: 575.98px) {
+  .event-stats-section .section-title {
+    font-size: 26px;
+    text-align: center;
+  }
+  .event-stats-section .event-card {
+    padding: 1rem;
+  }
+  .event-stats-section .btn-primary {
+    font-size: 14px;
+    padding: 12px;
+  }
+  .event-stats-section .text-end {
+    font-size: 12px;
+  }
+}
 .footer {
   background-color: #1c1c1c;
   color: #ffffff;
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
+}
+.footer .logo-img {
+  height: 69px;
+  width: 128px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  display: block;
+  margin-bottom: 10px;
+}
+.footer .logo-description {
+  font-size: 16px;
+  color: white;
+  text-align: justify;
+  line-height: 28px;
 }
 .footer a {
-  color: #ffffff;
+  color: #fff;
   text-decoration: none;
+  font-size: 16px;
 }
 .footer a:hover {
   text-decoration: underline;
   color: #cccccc;
 }
-.footer .social-icons i {
-  font-size: 24px;
+.footer .footer-bottom {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+.footer .footer-bottom p {
+  margin: 0;
+}
+.footer .footer-bottom i {
+  font-size: 20px;
   color: #ffffff;
 }
-.footer .social-icons i:hover {
+.footer .footer-bottom i:hover {
   color: #cccccc;
-}
-.footer p, .footer li {
-  font-size: 18px;
-  line-height: 28px;
-  text-align: start;
-}
-
-.logo-img {
-  height: 69px;
-  width: 128px;
-  -o-object-fit: none;
-     object-fit: none;
-}
-
-.logo-description {
-  font-family: "Montserrat", sans-serif;
-  font-size: 18px;
-  color: white;
-  text-align: justify;
 }
 
 .container-custom {
